@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz cumple morenita❤️</title>
+  <meta name="description" content="t amu" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f0f14;
+      --card:#171720;
+      --muted:#8b8b9c;
+      --txt:#ffffff;
+      --ac1:#ff6b9d;
+      --ac2:#9d6bff;
+      --ring: 0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      color:var(--txt); background: radial-gradient(1200px 800px at 10% -20%, #1d1d29 0%, var(--bg) 60%),
+                         radial-gradient(900px 600px at 120% 10%, #1a1326 0%, transparent 60%), var(--bg);
+      overflow-x:hidden;
+    }.hero{
+  min-height:100dvh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:56px 20px; text-align:center; position:relative; gap:18px;
+}
+.title{font-size:clamp(32px,6vw,56px); font-weight:700; letter-spacing:.5px}
+.subtitle{color:var(--muted); font-size:clamp(14px,2.5vw,18px)}
+
+.btn{
+  padding:14px 24px; border:0; border-radius:16px; background:linear-gradient(135deg,var(--ac1),var(--ac2));
+  color:#fff; font-weight:700; cursor:pointer; box-shadow:var(--ring); transition:transform .1s ease, filter .2s ease;
+}
+.btn:hover{ transform:translateY(-1px); filter:saturate(1.1)}
+
+.section{ max-width:1100px; margin:0 auto; padding:56px 20px; }
+.section h2{ font-size:clamp(24px,4vw,34px); margin:0 0 8px }
+.section p.lead{ color:var(--muted); margin:0 0 24px }
+
+.card{ background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+       border:1px solid rgba(255,255,255,.08); border-radius:18px; box-shadow:var(--ring); }
+
+.grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px }
+@media(min-width:720px){ .grid{ grid-template-columns:repeat(4,1fr) } }
+.photo, .video{ aspect-ratio:1/1; overflow:hidden; border-radius:16px; position:relative; cursor:pointer }
+.photo img, .video video{ width:100%; height:100%; object-fit:cover; filter:saturate(1.05); transition:transform .4s ease }
+.photo:hover img, .video:hover video{ transform:scale(1.05) }
+
+.notes{ display:grid; gap:14px; grid-template-columns:1fr }
+@media(min-width:860px){ .notes{ grid-template-columns:repeat(3,1fr) } }
+.note{
+  padding:18px; position:relative; overflow:hidden; border-radius:16px;
+  background: linear-gradient(135deg, #ff9ac9, #d68cff);
+  color:#fff; cursor:pointer; font-family:'Poppins', sans-serif;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25); transform:scale(1); transition:transform .2s ease, opacity .3s ease;
+}
+.note h3{ margin:0 0 6px; font-size:18px }
+.note p{ margin:0; display:none; font-weight:500 }
+.note:before{ content:'❤'; position:absolute; right:14px; bottom:-6px; font-size:48px; opacity:.1 }
+
+.note.open{ transform:scale(1.05); }
+.note.open p{ display:block; margin-top:8px; }
+
+.letter{ padding:24px; line-height:1.7; font-size:18px }
+
+.lightbox{ position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:50 }
+.lightbox.open{ display:flex }
+.lightbox img, .lightbox video{ max-width:92vw; max-height:82vh; border-radius:16px; box-shadow:0 30px 80px rgba(0,0,0,.6) }
+.lightbox .close{ position:fixed; top:20px; right:20px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); color:#fff; padding:10px 14px; border-radius:12px; cursor:pointer }
+
+audio{ display:none }
+
+footer{ text-align:center; padding:40px 20px; color:var(--muted) }
+
+.hearts{ position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:40 }
+.heart{ position:absolute; font-size:18px; animation: floatUp 6s linear forwards; opacity:.9; filter:drop-shadow(0 6px 10px rgba(0,0,0,.4)); }
+@keyframes floatUp{ from{ transform: translateY(110vh) rotate(0deg) } to{ transform: translateY(-10vh) rotate(360deg); opacity:0 } }
+
+.fade-in{ opacity:0; transform:translateY(10px); animation:fadeIn .8s ease forwards }
+@keyframes fadeIn{ to{ opacity:1; transform:none } }
+
+.embed{ overflow:hidden; border-radius:16px; border:1px solid rgba(255,255,255,.08) }
+
+  </style>
+</head>
+<body>
+  <audio id="bgm" src="runaway_rLeiNiDj.mp3" preload="auto" loop></audio>
+  <main>
+    <section class="hero">
+      <h1 class="title">Feliz cumpleaños monita!! 💖</h1>
+      <p class="subtitle">Esta pagina la hize solo para ti con todo mi corazon, apreta el botoncito y entra a nuestro mundito 😸</p>
+      <button id="btnEnter" class="btn">Entrar</button>
+    </section><!-- Sección: Galería -->
+<section class="section">
+  <h2>Recuerditos juntos❤️</h2>
+  <p class="lead">Videitos y fotos que me gustan porque reflejan lo mas bonito de nuestra relacion ,ser nosotros mismos en nuestro propio mundito,  pasarla bien y reirnos mucho juntitos🥰.</p>
+  <div class="grid" id="gallery">
+    <div class="photo card"><img src="Screenshot_2025-08-25-16-52-40-884_com.alphainventor.filemanager-edit.jpg" alt="Nosotros 1"></div>
+    <div class="photo card"><img src="Screenshot_2025-08-25-18-44-13-554_com.miui.gallery-edit.jpg" alt="Nosotros 2"></div>
+    <div class="photo card"><img src="image-3_1756155179926.jpg" alt="Nosotros 3"></div>
+    <div class="photo card"><img src="Screenshot_2025-08-25-18-43-46-952_com.miui.gallery-edit.jpg" alt="Nosotros 4"></div>
+    <div class="photo card"><img src="Screenshot_2025-08-25-16-56-54-299_com.google.android.apps.photos-edit.jpg" alt="Nosotros 5"></div>
+    <div class="video card"><video src="Screenrecorder-2025-08-25-18-47-37-551~2.mp4"></video></div>
+    <div class="video card"><video src="SCARED-1.mp4"></video></div>
+    <div class="video card"><video src="beb7da92-a92c-4d36-b466-fa9af689d4ca~2.mp4"></video></div>
+    <div class="video card"><video src="a1fab08f-2ec9-49e4-b671-bdcda62ddbfa~2.mp4"></video></div>
+    <div class="video card"><video src="Screenrecorder-2025-08-25-18-27-03-47~2.mp4"></video></div>
+    <div class="video card"><video src="Screenrecorder-2025-08-25-18-33-22-511~2.mp4"></video></div>
+    <div class="video card"><video src="Screenrecorder-2025-08-25-18-34-38-530~2.mp4"></video></div>
+ 
+</section>
+
+<!-- Mensajes bonitos -->
+<section class="section">
+  <h2>Mensajitos bonitos💌</h2>
+  <p class="lead"></p>
+  <div class="notes" id="notes">
+    <div class="note card" data-reveal="Recuerda que siempre estoy contigo, y tu siempre estas conmigo porque te llevo en mi corazoncito princesa, y sin importar cuanta distancia haya entre nosotros nuestro amor siempre sera mas grande❤️"><h3>Cuando me extrañes😸</h3><p>toca aquí 💗</p></div>
+    <div class="note card" data-reveal=""><h3>Recuerda que..!!😼</h3><p>toca aquí 💗</p></div>
+    <div class="note card" data-reveal="Piensa que cada vez falta menos para que en algun cumpleaños pueda apretarte con abrazo muuy largo y te coma a besitos😘"><h3>Cuando me sientas lejos😿</h3><p>toca aquí 💗</p></div>
+  </div>
+</section>
+
+<!-- Carta principal -->
+<section class="section card">
+  <h2>Cartita de cumpleaños para ti</h2>
+  <div class="letter">
+    <p>Mi niña,</p>
+    <p>Feliz cumpleaños!!, hoy se celebra tu vida mi amor y todo lo bonito que trajiste a la mía. Gracias por tu risita, por tu paciencia nndnd, por tu forma de ser que me encanta, porfavor nunca dejes de ser tu misma porque eres perfecta, quiero seguir construyendo contigo pasito a pasito un camino hasta que la distancia sea una cosa que contemos como historia mientras nos reimos🥰</p>
+    <p>Feliz cumpleaños mi vidaa estas de cumpleañooos,18 añitos mi persona favorita en este mundo, ojala este año este año te abrace con cosas lindas y ojala que yo también lo antes posible muejeje;
+    
+    
+    
+    
+    
+Me emociona mucho pensar que estas cumpliendo 18 añitos, y que estoy junto a ti en esta muy grande etapa de tu vida que recien esta empezando y de la cual me gustaria formar parte asta que la muerte nos separe, te deseo lo mejor del mundo en tu vida amor porque te lo mereces, ojala que todo lo que te propongas desde hoy en adelante lo puedas lograr y yo este ahí para felicitarte ( y tambien consolarte si hace falta po amorcito ) no puedo pensar en como expresarte lo que siento en este momento porque estas cumpliendo 18 añitos, es tu cumpleaños mi amor!! hoy es tu dia, el día que empezo tu existencia (y que bueno que este dia existe porque me encanta que existas ndnd) y también hoy es un dia super especial porque no es cualquier cumpleaños, son tus 18 añitooos!! no puedo parar de pensarlo deverdad me emociona que mi chiquita este tan grande, me encantaria poder pasar este dia contigo para comerte a besitos y poder expresarte todos los sentimientos que tengo hacia ti, ojala podamos compartir tu dia lo antes posible, feliz cumpleaños mi niña, estas muy grandecita ya😿, estoy muy orgulloso de ti por la persona que eres y la persona que yo se que seras, tienes un corazon gigante y un alma muy empatica, te mereces todo lo bueno de este mundo, de verdad que me enorgullece mucho quien eres tu y ser tu pareja, ojala cumplas muchos añitos mas, que todos los proyectos que tengas y vallas a tener los puedas lograr y ojala estar junto a ti en cada uno de ellos. Feliz cumpleaños mi niña, te amo mucho</p>
+    <p>Con toooodo mi amor y orgullo,<br>Tu pololo que te quiere mucho😸</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Te dedico esta cancion💌</h2>
+  <p class="lead">https://open.spotify.com/intl-es/track/70fVcEP5pRrxaIICY3DcPe</p>
+  
+</section>
+
+<footer>hize este regalo con mucho amor para ti, disculpa que por la distancia no pueda darte algo físicamente, te amu</footer>
+
+  </main>  <div class="lightbox" id="lightbox">
+    <img alt="Vista ampliada" id="lightImg" />
+    <video id="lightVideo" controls style="display:none"></video>
+    <button class="close" id="closeLight">Cerrar ✕</button>
+  </div>  <div class="hearts" id="hearts"></div>  <script>
+    const MENSAJES_SECRETOS = [
+      'te amo hasta el infinito (y un poquito mas) ndndn.',
+      'eres la tralalerita de mi tralalerito❤️.',
+      'eres mi casualidad favorita en la vida.'
+    ];
+
+    const btnEnter = document.getElementById('btnEnter');
+    const audio = document.getElementById('bgm');
+    btnEnter.addEventListener('click', async () => {
+      document.querySelector('.hero').style.display = 'none';
+      document.querySelector('main').scrollIntoView({behavior:'smooth'});
+      burstHearts();
+      try { await audio.play(); } catch(err) {}
+    });
+
+    const lb = document.getElementById('lightbox');
+    const lightImg = document.getElementById('lightImg');
+    const lightVideo = document.getElementById('lightVideo');
+    const closeLight = document.getElementById('closeLight');
+
+    document.getElementById('gallery').addEventListener('click', (e)=>{
+      const photo = e.target.closest('.photo')?.querySelector('img');
+      const video = e.target.closest('.video')?.querySelector('video');
+      if(photo){ lightImg.src = photo.src; lightImg.style.display='block'; lightVideo.style.display='none'; lb.classList.add('open'); }
+      else if(video){ lightVideo.src = video.src; lightVideo.style.display='block'; lightImg.style.display='none'; lb.classList.add('open'); }
+    });
+
+    closeLight.addEventListener('click', ()=> lb.classList.remove('open'));
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.classList.remove('open'); });
+
+    const notes = document.getElementById('notes');
+    notes.addEventListener('click', (e)=>{
+      const card = e.target.closest('.note');
+      if(!card) return;
+      const msg = card.dataset.reveal || 'Te amo muuuuuucho mucho mucho mucho pinchechita emosha muak😋';
+      card.classList.add('open');
+      card.innerHTML = `<h3>💗</h3><p>${msg}</p>`;
+      burstHearts();
+    });
+
+    const $hearts = document.getElementById('hearts');
+    function burstHearts(){
+      for(let i=0;i<20;i++){
+        const h = document.createElement('div');
+        h.className = 'heart';
+        h.textContent = Math.random()>.5 ? '❤' : '💖';
+        h.style.left = Math.random()*100 + 'vw';
+        h.style.animationDelay = Math.random()*.8 + 's';
+        h.style.fontSize = (14 + Math.random()*20) + 'px';
+        $hearts.appendChild(h);
+        setTimeout(()=> h.remove(), 6500);
+      }
+    }
+
+    setTimeout(()=>{
+      const surprise = document.createElement('button');
+      surprise.className='btn'; surprise.style.position='fixed'; surprise.style.bottom='20px'; surprise.style.right='20px';
+      surprise.textContent='Sorpresa';
+      surprise.addEventListener('click', ()=>{
+        const msg = MENSAJES_SECRETOS[Math.floor(Math.random()*MENSAJES_SECRETOS.length)];
+        alert(msg);
+        burstHearts();
+      });
+      document.body.appendChild(surprise);
+    }, 1600);
+  </script></body>
+</html>
